@@ -1,0 +1,12 @@
+<div class="grid gap-2 grid-cols-1 xl:grid-cols-2">
+  <div>
+    <h1 class="text-5xl mb-4">Admin::Equipment</h1>
+    <p class="pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit vel dui quis rutrum. Mauris sollicitudin tincidunt diam. Donec et elementum felis. Vestibulum non porttitor sapien. Nam id neque sit amet mauris placerat ultricies.</p>
+    <%= link_to "Create Equipment", new_admin_equipment_path, class: "p-4 bg-indigo-400 text-white rounded-xl" %>
+  </div>
+  <ul class="grid grid-cols-1 gap-2 md:grid-cols-2 pt-4">
+    <% @equipment.each do |equipment| %>
+      <li><%= render equipment %></li>
+    <% end %>
+  </ul>
+</div>
